@@ -1,7 +1,8 @@
 import { getRepo } from "./getRepo";
+import { renderResultList } from "./renderResultList";
 import {validateForm} from "./validateForm";
 
-export const formController = (form, formSearch) => {
+export const formController = async (form, formSearch) => {
   const searchRequest = form.search;
 
   validateForm(searchRequest);
@@ -10,9 +11,14 @@ export const formController = (form, formSearch) => {
     searchRequest.addEventListener('input', () => {
       validateForm(searchRequest);
     });
+    return;
   }
 
-  getRepo(searchRequest.value);
+  let arrResult = await getRepo(searchRequest.value);
+
+  renderResultList(arrResult, formSearch);
+
+
 
   form.reset();
 };
