@@ -2,20 +2,21 @@
 
   &__fieldset {
     width: 1024px;
-    min-height: 420px;
+    min-height: 150px;
     display: flex;
     flex-wrap: wrap;
     gap: 16px 12px;
     border-radius: 10px;
     background-color: #E4F2FF;
-    justify-content: flex-end;
+    // align-items: center;
     padding-top: 20px;
     
   }
   
   &__label {
-    flex: 1 1 300px;
+    flex: 1 300px;
     position: relative;
+
   }
 
   &__text {

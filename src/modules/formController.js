@@ -1,3 +1,4 @@
+import { getRepo } from "./getRepo";
 import {validateForm} from "./validateForm";
 
 export const formController = (form, formSearch) => {
@@ -10,6 +11,8 @@ export const formController = (form, formSearch) => {
       validateForm(searchRequest);
     });
   }
+
+  getRepo(searchRequest.value);
 
   form.reset();
 };

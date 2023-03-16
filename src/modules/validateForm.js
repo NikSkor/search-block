@@ -6,9 +6,9 @@ export const validateForm = (input) => {
   let warn = parent.querySelector('.form__warning');
   let text = '';
 
-  if (input.value.length > 255) {
-    
-    text = 'Значение не должно превышать 255 символов';
+  if (input.value.length > 256) {
+
+    text = 'Значение не должно превышать 256 символов';
     renderWarn(text, parent);
   }
 
