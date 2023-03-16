@@ -18,7 +18,5 @@ export const formController = async (form, formSearch) => {
 
   renderResultList(arrResult, formSearch);
 
-
-
   form.reset();
 };

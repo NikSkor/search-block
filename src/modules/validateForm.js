@@ -1,5 +1,4 @@
 import { renderWarn } from "./renderWarn";
-import {createElement} from "./utils/createElement";
 
 export const validateForm = (input) => {
   let parent = input.parentElement;

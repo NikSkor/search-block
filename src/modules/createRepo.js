@@ -5,7 +5,7 @@ export const createRepo = (item)=> {
     className: 'search__item',
   });
 
-  let img = createElement(
+  createElement(
     'img',
     {
       className: 'search__avatar',
@@ -33,7 +33,7 @@ export const createRepo = (item)=> {
     }
   );
   createElement(
-    'a',
+    'div',
     {
       className: 'search__sub-title',
     },

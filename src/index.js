@@ -15,6 +15,6 @@ window.addEventListener('keyup', (e) => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-    formController(form, formSearch);
+  formController(form, formSearch);
 });
 

@@ -9,22 +9,18 @@
     gap: 16px 12px;
     border-radius: 10px;
     background-color: #E4F2FF;
-    // align-items: center;
     padding-top: 20px;
-    
   }
   
   &__label {
     flex: 1 300px;
     position: relative;
-
   }
 
   &__text {
     display: block;
     font-weight: 500;
     margin-bottom: 4px;
-
   }
 
   &__input {

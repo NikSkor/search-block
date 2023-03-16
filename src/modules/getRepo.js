@@ -7,7 +7,6 @@ export const getRepo = async (request) => {
   let data = await res.json();
 
   let arrData = data.items;
-  console.log('arrData: ', arrData);
 
   return arrData;
 };
