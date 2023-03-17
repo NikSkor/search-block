@@ -7,12 +7,19 @@ export const formController = async (form, formSearch) => {
 
   validateForm(searchRequest);
 
-  if (searchRequest.value === '') {
+  if (searchRequest.value.length > 256) {
     searchRequest.addEventListener('input', () => {
       validateForm(searchRequest);
     });
     return;
-  };
+  }
+
+  if (searchRequest.value.length <= 2) {
+    searchRequest.addEventListener('input', () => {
+      validateForm(searchRequest);
+    });
+    return;
+  }
 
   let arrResult = await getRepo(searchRequest.value);
 
