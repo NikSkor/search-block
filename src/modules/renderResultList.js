@@ -4,7 +4,18 @@ import {createElement} from "./utils/createElement";
 export const renderResultList = (arr, parent)=> {
   parent.innerHTML = '';
 
-  if (arr.length === 0) {
+  if (arr === null || arr === undefined) {
+    createElement(
+      'p',
+      {
+        className: 'search__empty-title',
+        textContent: 'Ошибка в загрузке',
+      },
+      {
+        parent: parent,
+      }
+    );
+  } else if (arr.length === 0) {
     createElement(
       'p',
       {
@@ -15,17 +26,18 @@ export const renderResultList = (arr, parent)=> {
         parent: parent,
       }
     );
+  } else {
+    let ul = createElement(
+      'ul',
+      {
+        className: 'search__list',
+      },
+      {
+        parent: parent,
+      }
+    );
+    arr.map((item) => {
+      ul.append(createRepo(item));
+    });
   }
-  let ul = createElement(
-    'ul',
-    {
-      className: 'search__list',
-    },
-    {
-      parent: parent,
-    }
-  );
-  arr.map((item) => {
-    ul.append(createRepo(item));
-  });
 };
