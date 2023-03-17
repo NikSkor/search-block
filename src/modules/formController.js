@@ -12,11 +12,7 @@ export const formController = async (form, formSearch) => {
       validateForm(searchRequest);
     });
     return;
-  }
-
-  // if(arrResult === undefined) {
-  //   arrResult = null;
-  // }
+  };
 
   let arrResult = await getRepo(searchRequest.value);
 
